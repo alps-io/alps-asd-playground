@@ -140,7 +140,7 @@
         "rel" : "person item",
         "doc": {"value": "An action that updates an existing person record. Accepts the following inputs: `identifier` (read-only), `givenName`, `familyName`, and `status`."},
         "text": "Update an existing person record.",
-        "tag": "choreography",
+        "tag": "choreography update",
         "descriptor": [
           {"href": "#identifier"},
           {"href": "#givenName"},
@@ -152,7 +152,7 @@
         "rel" : "person status item",
         "doc": {"value": "An action to update the status value of an existing person record. Accepts: `identifier` (read-only), and `status`."},
         "text": "Update the status value of an existing person record.",
-        "tag": "choreography",
+        "tag": "choreography update",
         "descriptor": [
           {"href": "#identifier"},
           {"href": "#status"}

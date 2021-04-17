@@ -1,0 +1,233 @@
+openapi: 3.0.1
+info:
+  title: 'ALPS Person Profile'
+  description: "A sample ALPS tutorial. This shows how to use ALPS to document the three key parts of any semantic profile:\n\n - **ontology**: _particular meaning_ \n - **taxonomy**: _arrangement of the parts_ \n - **choreography**: _rules for interaction between the parts_ \n\n See [Dan Klyn's blog post](https://understandinggroup.com/ia-theory/understanding-information-architecture), his [short video](https://vimeo.com/8866160), and the book [Information Architecture](https://www.amazon.com/Information-Architecture-Beyond-Louis-Rosenfeld/dp/1491911689) for more on these three elements."
+  version: 1.0.0
+paths:
+  /goHome:
+    get:
+      summary: 'Navigation action to return the Home resource state.'
+      operationId: goHome
+      responses:
+        '200':
+          description: goHome
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/#home'
+  /goPersonCollection:
+    get:
+      summary: 'Navigation action that returns a list of person records.'
+      operationId: goPersonCollection
+      responses:
+        '200':
+          description: goPersonCollection
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/#personCollection'
+  /goPersonFilter:
+    get:
+      summary: 'Navigation action that returns a filtered list of person records.'
+      operationId: goPersonFilter
+      responses:
+        '200':
+          description: goPersonFilter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/#personCollection'
+  /goPersonItem:
+    get:
+      summary: 'Navigation action that returns a single person record.'
+      operationId: goPersonItem
+      responses:
+        '200':
+          description: goPersonItem
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/#personItem'
+  /goPersonStatus:
+    get:
+      summary: 'Navigation action that returns the status value of a single person record.'
+      operationId: goPersonStatus
+      responses:
+        '200':
+          description: goPersonStatus
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/#personStatus'
+  /doPersonCreate:
+    post:
+      summary: 'Add a new person record to the collection.'
+      operationId: doPersonCreate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/#personItem'
+      responses:
+        '200':
+          description: 'add doPersonCreate'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/#personItem'
+  /doPersonUpdate:
+    put:
+      summary: 'Update an existing person record.'
+      operationId: doPersonUpdate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/#personItem'
+      responses:
+        '200':
+          description: 'add doPersonUpdate'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/#personItem'
+  /doPersonStatusUpdate:
+    put:
+      summary: 'Update the status value of an existing person record.'
+      operationId: doPersonStatusUpdate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/#personStatus'
+      responses:
+        '200':
+          description: 'add doPersonStatusUpdate'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/#personStatus'
+components:
+  schemas:
+    home:
+      type: object
+      properties:
+        '#home':
+          type: string
+          example: '#home'
+        '#goHome':
+          type: string
+          example: '#goHome'
+        '#goPersonCollection':
+          type: string
+          example: '#goPersonCollection'
+      description: 'Starting point for the API'
+    personCollection:
+      type: object
+      properties:
+        '#identifier':
+          type: string
+          example: '#identifier'
+        '#givenName':
+          type: string
+          example: '#givenName'
+        '#familyName':
+          type: string
+          example: '#familyName'
+        '#status':
+          type: string
+          example: '#status'
+        '#goHome':
+          type: string
+          example: '#goHome'
+        '#goPersonCollection':
+          type: string
+          example: '#goPersonCollection'
+        '#goPersonFilter':
+          type: string
+          example: '#goPersonFilter'
+        '#goPersonItem':
+          type: string
+          example: '#goPersonItem'
+        '#doPersonCreate':
+          type: string
+          example: '#doPersonCreate'
+      description: 'Aggregate object that represents a collection of person records'
+    personItem:
+      type: object
+      properties:
+        '#identifier':
+          type: string
+          example: '#identifier'
+        '#givenName':
+          type: string
+          example: '#givenName'
+        '#familyName':
+          type: string
+          example: '#familyName'
+        '#status':
+          type: string
+          example: '#status'
+        '#goHome':
+          type: string
+          example: '#goHome'
+        '#goPersonCollection':
+          type: string
+          example: '#goPersonCollection'
+        '#goPersonItem':
+          type: string
+          example: '#goPersonItem'
+        '#goPersonStatus':
+          type: string
+          example: '#goPersonStatus'
+        '#doPersonUpdate':
+          type: string
+          example: '#doPersonUpdate'
+      description: 'Aggregate object that represents a single person.'
+    personStatus:
+      type: object
+      properties:
+        '#identifier':
+          type: string
+          example: '#identifier'
+        '#status':
+          type: string
+          example: '#status'
+        '#goHome':
+          type: string
+          example: '#goHome'
+        '#goPersonCollection':
+          type: string
+          example: '#goPersonCollection'
+        '#goPersonItem':
+          type: string
+          example: '#goPersonItem'
+        '#goPersonStatus':
+          type: string
+          example: '#goPersonStatus'
+        '#doPersonStatusUpdate':
+          type: string
+          example: '#doPersonStatusUpdate'
+      description: 'The status of a single person record.'
