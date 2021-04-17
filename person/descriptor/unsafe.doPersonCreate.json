@@ -2,7 +2,7 @@
   "$schema": "https://alps-io.github.io/schemas/alps.json",
   "alps": {
     "doc": {
-      "value": "Adds a new person record to the collection. Accepts the following inputs: `identifier`, `givenName`, `familyName`, and `status`."
+      "value": "Adds a new person record to the collection. Accepts the following inputs: `identifier` (optional), `givenName`, `familyName`, and `status`. If no value is supplied for `identifier`, the service will generate a value. "
     },
     "descriptor": [
       {

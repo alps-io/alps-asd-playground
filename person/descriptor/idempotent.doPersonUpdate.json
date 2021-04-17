@@ -2,7 +2,7 @@
   "$schema": "https://alps-io.github.io/schemas/alps.json",
   "alps": {
     "doc": {
-      "value": "An action that updates an existing person record. Accepts the following inputs: `identifier`, `givenName`, `familyName`, and `status`. In this case, the `identifier` value is read-only."
+      "value": "An action that updates an existing person record. Accepts the following inputs: `identifier` (read-only), `givenName`, `familyName`, and `status`."
     },
     "descriptor": [
       {
