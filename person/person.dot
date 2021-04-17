@@ -16,7 +16,7 @@ digraph application_state_diagram {
     home -> personCollection [label = "goPersonCollection, person collection (safe)" URL="docs/safe.goPersonCollection.html" target="_parent" fontsize=13];
     personCollection -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
     personCollection -> personCollection [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonCollection.html">goPersonCollection (safe)</td></tr><tr><td align="left" href="docs/safe.goPersonFilter.html">goPersonFilter (safe)</td></tr></table>> fontsize=13];
-    personCollection -> personItem [label = "doPersonCreate, person item (unsafe)" URL="docs/unsafe.doPersonCreate.html" target="_parent" fontsize=13];
+    personCollection -> personItem [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonItem.html">goPersonItem (safe)</td></tr><tr><td align="left" href="docs/unsafe.doPersonCreate.html">doPersonCreate (unsafe)</td></tr></table>> fontsize=13];
     personItem -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
     personItem -> personCollection [label = "goPersonCollection, person collection (safe)" URL="docs/safe.goPersonCollection.html" target="_parent" fontsize=13];
     personItem -> personItem [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonItem.html">goPersonItem (safe)</td></tr><tr><td align="left" href="docs/idempotent.doPersonUpdate.html">doPersonUpdate (idempotent)</td></tr></table>> fontsize=13];

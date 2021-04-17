@@ -50,6 +50,7 @@
           {"href": "#goHome"},
           {"href": "#goPersonCollection"},
           {"href": "#goPersonFilter"},
+          {"href": "#goPersonItem"},
           {"href": "#doPersonCreate"}
         ]
       },
