@@ -1,0 +1,22 @@
+{
+  "$schema": "",
+  "alps": {
+    "doc": {
+      "format": "markdown",
+      "value": "-\nDisplays realtime status of TODO collection"
+    },
+    "descriptor": [
+      {
+        "id": "statusCheck",
+        "ref": "http://examples.org/defs/status-check",
+        "type": "safe"
+      }
+    ]
+  },
+  "link": [
+    {
+      "rel": "parent",
+      "href": "semantic..json"
+    }
+  ]
+}

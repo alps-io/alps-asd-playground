@@ -1,0 +1,14 @@
+{
+  "$schema": "https://alps-io.github.io/schemas/alps.json",
+  "alps": {
+    "doc": {
+      "value": "A single person record along with possible actions."
+    },
+    "descriptor": [
+      {
+        "id": "personItem",
+        "type": "semantic"
+      }
+    ]
+  }
+}

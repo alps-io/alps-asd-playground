@@ -1,0 +1,16 @@
+{
+  "$schema": "",
+  "alps": {
+    "doc": {
+      "format": "markdown",
+      "value": "Status of the todoItem"
+    },
+    "descriptor": [
+      {
+        "id": "status",
+        "ref": "https://schema.org/status",
+        "type": "semantic"
+      }
+    ]
+  }
+}

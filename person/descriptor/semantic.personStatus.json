@@ -1,0 +1,14 @@
+{
+  "$schema": "https://alps-io.github.io/schemas/alps.json",
+  "alps": {
+    "doc": {
+      "value": "Status value of a single person record along with possible actions."
+    },
+    "descriptor": [
+      {
+        "id": "personStatus",
+        "type": "semantic"
+      }
+    ]
+  }
+}

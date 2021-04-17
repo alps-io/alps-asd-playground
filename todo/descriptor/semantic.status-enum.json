@@ -1,0 +1,16 @@
+{
+  "$schema": "",
+  "alps": {
+    "doc": {
+      "format": "markdown",
+      "value": "List of valid status values"
+    },
+    "descriptor": [
+      {
+        "id": "status-enum",
+        "ref": "http://example.org/defs/status-enum",
+        "type": "semantic"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "",
+  "alps": {
+    "doc": {
+      "format": "markdown",
+      "value": "This is a group of properties for a single todoItem"
+    },
+    "descriptor": [
+      {
+        "id": "todoItem",
+        "type": "semantic"
+      }
+    ]
+  }
+}

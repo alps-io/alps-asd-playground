@@ -1,0 +1,22 @@
+{
+  "$schema": "",
+  "alps": {
+    "doc": {
+      "format": "markdown",
+      "value": "Transition to update an existing TODO Item."
+    },
+    "descriptor": [
+      {
+        "id": "updateToDoItem",
+        "ref": "http://example.org/update",
+        "type": "idempotent"
+      }
+    ]
+  },
+  "link": [
+    {
+      "rel": "parent",
+      "href": "semantic..json"
+    }
+  ]
+}

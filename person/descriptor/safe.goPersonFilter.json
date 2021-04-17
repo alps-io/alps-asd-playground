@@ -1,0 +1,20 @@
+{
+  "$schema": "https://alps-io.github.io/schemas/alps.json",
+  "alps": {
+    "doc": {
+      "value": "Returns a filtered set of person records. Valid filter values are `givenName`, `familyName`, and `status`."
+    },
+    "descriptor": [
+      {
+        "id": "goPersonFilter",
+        "type": "safe"
+      }
+    ]
+  },
+  "link": [
+    {
+      "rel": "parent",
+      "href": "semantic..json"
+    }
+  ]
+}

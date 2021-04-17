@@ -1,0 +1,18 @@
+{
+  "$schema": "",
+  "alps": {
+    "descriptor": [
+      {
+        "id": "title01",
+        "ref": "https://schema.org/title",
+        "type": "semantic"
+      }
+    ]
+  },
+  "link": [
+    {
+      "rel": "parent",
+      "href": "safe.filterToDoItems.json"
+    }
+  ]
+}

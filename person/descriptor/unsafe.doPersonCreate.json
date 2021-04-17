@@ -1,0 +1,20 @@
+{
+  "$schema": "https://alps-io.github.io/schemas/alps.json",
+  "alps": {
+    "doc": {
+      "value": "Adds a new person record to the collection. Accepts the following inputs: `identifier`, `givenName`, `familyName`, and `status`."
+    },
+    "descriptor": [
+      {
+        "id": "doPersonCreate",
+        "type": "unsafe"
+      }
+    ]
+  },
+  "link": [
+    {
+      "rel": "parent",
+      "href": "semantic..json"
+    }
+  ]
+}

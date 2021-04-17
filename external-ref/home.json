@@ -1,0 +1,10 @@
+{
+  "alps" : {
+    "version" : "1.0",
+    "title" : "Testing External References",
+    "descriptor" : [
+      {"href": "https://rwmbook.github.io/alps-documents/mru/mru.json#home"},
+      {"href": "https://rwmbook.github.io/alps-documents/related/related.json#home"}
+    ]
+  }
+}

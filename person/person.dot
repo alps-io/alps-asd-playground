@@ -1,0 +1,30 @@
+digraph application_state_diagram {
+  graph [
+    labelloc="t";
+    fontname="Helvetica"
+    label="ALPS Person Profile";
+    URL="index.html" target="_parent"
+  ];
+  node [shape = box, style = "bold,filled" fillcolor="lightgray"];
+
+    home [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>home<br />(home)<br /></td></tr></table>>,shape=box URL="docs/semantic.home.html" target="_parent"]
+    personCollection [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>personCollection<br />(identifier)<br />(givenName)<br />(familyName)<br />(status)<br /></td></tr></table>>,shape=box URL="docs/semantic.personCollection.html" target="_parent"]
+    personItem [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>personItem<br />(identifier)<br />(givenName)<br />(familyName)<br />(status)<br /></td></tr></table>>,shape=box URL="docs/semantic.personItem.html" target="_parent"]
+    personStatus [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>personStatus<br />(identifier)<br />(status)<br /></td></tr></table>>,shape=box URL="docs/semantic.personStatus.html" target="_parent"]
+
+    home -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
+    home -> personCollection [label = "goPersonCollection, person collection (safe)" URL="docs/safe.goPersonCollection.html" target="_parent" fontsize=13];
+    personCollection -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
+    personCollection -> personCollection [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonCollection.html">goPersonCollection (safe)</td></tr><tr><td align="left" href="docs/safe.goPersonFilter.html">goPersonFilter (safe)</td></tr></table>> fontsize=13];
+    personCollection -> personItem [label = "doPersonCreate, person item (unsafe)" URL="docs/unsafe.doPersonCreate.html" target="_parent" fontsize=13];
+    personItem -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
+    personItem -> personCollection [label = "goPersonCollection, person collection (safe)" URL="docs/safe.goPersonCollection.html" target="_parent" fontsize=13];
+    personItem -> personItem [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonItem.html">goPersonItem (safe)</td></tr><tr><td align="left" href="docs/idempotent.doPersonUpdate.html">doPersonUpdate (idempotent)</td></tr></table>> fontsize=13];
+    personItem -> personStatus [label = "goPersonStatus, person status item (safe)" URL="docs/safe.goPersonStatus.html" target="_parent" fontsize=13];
+    personStatus -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
+    personStatus -> personCollection [label = "goPersonCollection, person collection (safe)" URL="docs/safe.goPersonCollection.html" target="_parent" fontsize=13];
+    personStatus -> personItem [label = "goPersonItem, person item (safe)" URL="docs/safe.goPersonItem.html" target="_parent" fontsize=13];
+    personStatus -> personStatus [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonStatus.html">goPersonStatus (safe)</td></tr><tr><td align="left" href="docs/idempotent.doPersonStatusUpdate.html">doPersonStatusUpdate (idempotent)</td></tr></table>> fontsize=13];
+
+
+}

@@ -1,0 +1,162 @@
+{
+  "$schema": "https://alps-io.github.io/schemas/alps.json",
+  "alps" : {
+    "version": "1.0",
+    "title": "ALPS Person Profile",
+    "doc": {"value": "A sample ALPS tutorial. This shows how to use ALPS to document the three key parts of any semantic profile:\n\n - **ontology**: _particular meaning_ \n - **taxonomy**: _arrangement of the parts_ \n - **choreography**: _rules for interaction between the parts_ \n\n See [Dan Klyn's blog post](https://understandinggroup.com/ia-theory/understanding-information-architecture), his [short video](https://vimeo.com/8866160), and the book [Information Architecture](https://www.amazon.com/Information-Architecture-Beyond-Louis-Rosenfeld/dp/1491911689) for more on these three elements."},
+    "descriptor": [
+
+      {"id":"identifier", "type":"semantic", 
+        "doc": {"value": "Unique ID of this record. SHOULD be a string."}, 
+        "def":"https://schema.org/identifier", 
+        "text": "Unique ID of this record.",
+        "tag":"ontology"},
+      {"id":"givenName", "type":"semantic", 
+        "doc": {"value": "Common name of the person. SHOULD be a string."},
+        "def":"https://schema.org/givenName",
+        "text": "Common name.",
+        "tag":"ontology"},
+      {"id":"familyName", "type":"semantic", 
+      "doc": {"value": "Family name of the person. SHOULD be a string."},
+        "def":"https://schema.org/familyName",
+        "text": "Family name.",
+        "tag":"ontology"},  
+      {"id":"status", "type":"semantic", 
+      "doc": {"value": "Status flag for this record"},
+        "doc": {"value": "Status of this record. Valid values are: `pending`, `active`, and `closed`."},
+        "def":"https://schema.org/status",
+        "text": "Status flag.",
+        "tag":"ontology"},  
+
+      {"id": "home", "type":"semantic",
+        "doc": {"value": "Starting resource that points to a list of person records."},
+        "text": "Starting point for the API",
+        "tag": "taxonomy",
+        "descriptor": [
+          {"href": "#home"},
+          {"href": "#goHome"},
+          {"href": "#goPersonCollection"}
+        ]
+      },
+      {"id":"personCollection", "type":"semantic",
+        "doc": {"value": "A list of person records along with possible actions."},
+        "text": "Aggregate object that represents a collection of person records",
+        "tag" : "taxonomy",
+        "descriptor" : [
+          {"href": "#identifier"},
+          {"href": "#givenName"},
+          {"href": "#familyName"},
+          {"href": "#status"},
+          {"href": "#goHome"},
+          {"href": "#goPersonCollection"},
+          {"href": "#goPersonFilter"},
+          {"href": "#doPersonCreate"}
+        ]
+      },
+      {"id":"personItem", "type":"semantic",
+        "doc": {"value": "A single person record along with possible actions."},
+        "text": "Aggregate object that represents a single person.",
+        "tag" : "taxonomy",
+        "descriptor" : [
+          {"href": "#identifier"},
+          {"href": "#givenName"},
+          {"href": "#familyName"},
+          {"href": "#status"},
+          {"href": "#goHome"},
+          {"href": "#goPersonCollection"},
+          {"href": "#goPersonItem"},
+          {"href": "#goPersonStatus"},
+          {"href": "#doPersonUpdate"}
+        ]
+      },
+      {"id": "personStatus", "type": "semantic",
+        "doc": {"value": "Status value of a single person record along with possible actions."},
+        "text": "The status of a single person record.",
+        "tag": "taxonomy",
+        "descriptor": [
+          {"href": "#identifier"},
+          {"href": "#status"},
+          {"href": "#goHome"},
+          {"href": "#goPersonCollection"},
+          {"href": "#goPersonItem"},
+          {"href": "#goPersonStatus"},
+          {"href": "#doPersonStatusUpdate"}
+        ]
+      },
+      
+      {"id": "goHome", "type": "safe", "rt": "#home",
+        "rel": "home",
+        "doc": {"value": "Navigate to the home resource"},
+        "text": "Navigation action to return the Home resource state.",
+        "tag" : "choreography"},
+      {"id": "goPersonCollection", "type": "safe", "rt": "#personCollection",
+        "rel": "person collection",
+        "doc": {"value": "Return a list of person records"},
+        "text": "Navigation action that returns a list of person records.",
+        "tag": "choreography"},  
+      {"id": "goPersonFilter", "type": "safe", "rt": "#personCollection",
+        "rel" : "person collection",
+        "doc": {"value": "Returns a filtered set of person records. Valid filter values are `givenName`, `familyName`, and `status`."},
+        "text": "Navigation action that returns a filtered list of person records.",
+        "tag": "choreography",
+        "descriptor": [
+          {"href": "#givenName"},
+          {"href": "#familyName"},
+          {"href": "#status"}
+        ]
+      },
+      {"id": "goPersonItem", "type": "safe", "rt": "#personItem",
+        "rel" : "person item",
+        "doc": {"value": "Return a single person record. Accepts a single input: `identifer`."},
+        "text": "Navigation action that returns a single person record.",
+        "tag": "choreography",
+        "descriptor": [
+          {"href": "#identifier"}
+        ]
+      },
+      {"id": "goPersonStatus", "type": "safe", "rt": "#personStatus",
+        "rel" : "person status item",
+        "doc": {"value": "View the status value of an existing person record. Accepts a single input: `identifier`."},
+        "text":"Navigation action that returns the status value of a single person record.",
+        "tag": "choreography",
+        "descriptor": [
+          {"href": "#identifier"}
+        ]
+      },
+      {"id": "doPersonCreate", "type": "unsafe", "rt": "#personItem",
+        "rel" : "person item",
+        "doc": {"value": "Adds a new person record to the collection. Accepts the following inputs: `identifier`, `givenName`, `familyName`, and `status`."},
+        "text": "Add a new person record to the collection.",
+        "tag": "choreography",
+        "descriptor": [
+          {"href": "#identifier"},
+          {"href": "#givenName"},
+          {"href": "#familyName"},
+          {"href": "#status"}
+        ]
+      },
+      {"id": "doPersonUpdate", "type": "idempotent", "rt": "#personItem",
+        "rel" : "person item",
+        "doc": {"value": "An action that updates an existing person record. Accepts the following inputs: `identifier`, `givenName`, `familyName`, and `status`. In this case, the `identifier` value is read-only."},
+        "text": "Update an existing person record.",
+        "tag": "choreography",
+        "descriptor": [
+          {"href": "#identifier"},
+          {"href": "#givenName"},
+          {"href": "#familyName"},
+          {"href": "#status"}
+        ]
+      },
+      {"id": "doPersonStatusUpdate", "type": "idempotent", "rt": "#personStatus",
+        "rel" : "person status item",
+        "doc": {"value": "An actions to update the status value of an existing person record. Accepts: `identifier` (read-only), and `status`."},
+        "text": "Update the status value of an existing person record.",
+        "tag": "choreography",
+        "descriptor": [
+          {"href": "#identifier"},
+          {"href": "#status"}
+        ]
+      }
+    ]
+  }
+}
