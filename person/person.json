@@ -126,7 +126,7 @@
       },
       {"id": "doPersonCreate", "type": "unsafe", "rt": "#personItem",
         "rel" : "person item",
-        "doc": {"value": "Adds a new person record to the collection. Accepts the following inputs: `identifier`, `givenName`, `familyName`, and `status`."},
+        "doc": {"value": "Adds a new person record to the collection. Accepts the following inputs: `identifier` (optional), `givenName`, `familyName`, and `status`. If no value is supplied for `identifier`, the service will generate a value. "},
         "text": "Add a new person record to the collection.",
         "tag": "choreography",
         "descriptor": [
@@ -138,7 +138,7 @@
       },
       {"id": "doPersonUpdate", "type": "idempotent", "rt": "#personItem",
         "rel" : "person item",
-        "doc": {"value": "An action that updates an existing person record. Accepts the following inputs: `identifier`, `givenName`, `familyName`, and `status`. In this case, the `identifier` value is read-only."},
+        "doc": {"value": "An action that updates an existing person record. Accepts the following inputs: `identifier` (read-only), `givenName`, `familyName`, and `status`."},
         "text": "Update an existing person record.",
         "tag": "choreography",
         "descriptor": [
@@ -150,7 +150,7 @@
       },
       {"id": "doPersonStatusUpdate", "type": "idempotent", "rt": "#personStatus",
         "rel" : "person status item",
-        "doc": {"value": "An actions to update the status value of an existing person record. Accepts: `identifier` (read-only), and `status`."},
+        "doc": {"value": "An action to update the status value of an existing person record. Accepts: `identifier` (read-only), and `status`."},
         "text": "Update the status value of an existing person record.",
         "tag": "choreography",
         "descriptor": [
