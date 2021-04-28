@@ -3,8 +3,16 @@
     "version" : "1.0",
     "title" : "Testing External References",
     "descriptor" : [
-      {"href": "https://rwmbook.github.io/alps-documents/mru/mru.json#home"},
-      {"href": "https://rwmbook.github.io/alps-documents/related/related.json#home"}
-    ]
+
+      {"id": "home", "type":"semantic", "rel":"home", "tag":"taxonomy", "title": "Home resource",
+        "descriptor": [
+          {"href": "#goHome"},
+          {"href": "https://rwmbook.github.io/alps-documents/mru/mru.json#goMRU"},
+          {"href": "https://rwmbook.github.io/alps-documents/related/related.json#goRelated"}
+        ]
+      },
+
+      {"id": "goHome", "type":"safe", "rt":"#home", "rel": "home", "tag": "choreography", "title": "Link to the Home Resource"}
+   ]
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "",
   "alps": {
     "doc": {
-      "value": "The link relation value of an available related action. This value SHOULD also include the link relation value of 'related'"
+      "value": "The link relation value of the most recently used action. This value SHOULD also include the link relation value of 'mru'"
     },
     "descriptor": [
       {

@@ -1,9 +1,6 @@
 {
   "$schema": "",
   "alps": {
-    "doc": {
-      "value": "A safe, idempotent action to return to the Home document"
-    },
     "descriptor": [
       {
         "id": "goHome",

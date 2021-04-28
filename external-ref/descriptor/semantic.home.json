@@ -1,9 +1,6 @@
 {
   "$schema": "",
   "alps": {
-    "doc": {
-      "value": "Home represents any current document or starting point in the flow"
-    },
     "descriptor": [
       {
         "id": "home",
