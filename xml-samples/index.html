@@ -34,17 +34,18 @@ Servers MUST decide which data elements are valid in transitions. Clients SHOULD
 <li>Semantic Descriptors
 
 <ul>
-<li><a href="docs/semantic.category.html">category</a> (semantic)</li>
-<li><a href="docs/unsafe.close.html">close</a> (unsafe)</li>
-<li><a href="docs/unsafe.create.html">create</a> (unsafe)</li>
-<li><a href="docs/semantic.dueDate.html">dueDate</a> (semantic)</li>
-<li><a href="docs/safe.list.html">list</a> (safe)</li>
-<li><a href="docs/semantic.owner.html">owner</a> (semantic)</li>
-<li><a href="docs/idempotent.remove.html">remove</a> (idempotent)</li>
-<li><a href="docs/safe.search.html">search</a> (safe)</li>
-<li><a href="docs/semantic.title.html">title</a> (semantic)</li>
+<li><a href="docs/semantic.category.html">category</a> (semantic), free-form string identifying the category of the TODO item</li>
+<li><a href="docs/unsafe.close.html">close</a> (unsafe), marks an existing TODO item status as 'closed'</li>
+<li><a href="docs/unsafe.create.html">create</a> (unsafe), add a new TODO item to the collection (using title, dueDate, category, owner)</li>
+<li><a href="docs/semantic.dueDate.html">dueDate</a> (semantic), dueDate (ISO format) of the TODO item</li>
+<li><a href="docs/safe.list.html">list</a> (safe), returns a list of TODO items</li>
+<li><a href="docs/semantic.owner.html">owner</a> (semantic), free-form string identifying the owner (person) of the TODO item</li>
+<li><a href="docs/idempotent.remove.html">remove</a> (idempotent), removes an existing TODO item from the list</li>
+<li><a href="docs/safe.search.html">search</a> (safe), returns a filtered list (using title, category, owner) of TODO Items</li>
+<li><a href="docs/semantic.status.html">status</a> (semantic), status of the TODO item (open or closed, defaults to open)</li>
+<li><a href="docs/semantic.title.html">title</a> (semantic), title of the TODO item</li>
 <li><a href="docs/semantic.todoItem.html">todoItem</a> (semantic)</li>
-<li><a href="docs/idempotent.update.html">update</a> (idempotent)</li>
+<li><a href="docs/idempotent.update.html">update</a> (idempotent), updates an existing TODO item (using dueDate, category and owner)</li>
 </ul></li>
 <li>Tags
 

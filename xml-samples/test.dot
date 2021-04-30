@@ -7,7 +7,7 @@ digraph application_state_diagram {
   ];
   node [shape = box, style = "bold,filled" fillcolor="lightgray"];
 
-    todoItem [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>todoItem<br />(title)<br />(dueDate)<br />(category)<br />(owner)<br /></td></tr></table>>,shape=box URL="docs/semantic.todoItem.html" target="_parent"]
+    todoItem [margin=0.02, label=<<table cellspacing="0" cellpadding="5" border="0"><tr><td>todoItem<br />(title)<br />(dueDate)<br />(category)<br />(owner)<br />(status)<br /></td></tr></table>>,shape=box URL="docs/semantic.todoItem.html" target="_parent"]
 
     todoItem -> todoItem [label=<<table  border="0"><tr><td align="left" href="docs/unsafe.close.html">close (unsafe)</td></tr><tr><td align="left" href="docs/unsafe.create.html">create (unsafe)</td></tr><tr><td align="left" href="docs/safe.list.html">list (safe)</td></tr><tr><td align="left" href="docs/idempotent.remove.html">remove (idempotent)</td></tr><tr><td align="left" href="docs/safe.search.html">search (safe)</td></tr><tr><td align="left" href="docs/idempotent.update.html">update (idempotent)</td></tr></table>> fontsize=13];
 
