@@ -1,0 +1,11 @@
+{
+  "$schema": "",
+  "alps": {
+    "descriptor": [
+      {
+        "id": "title",
+        "type": "semantic"
+      }
+    ]
+  }
+}
