@@ -26,9 +26,10 @@
 
 <ul>
 <li>type: idempotent</li>
+<li>title: Update an existing person record.</li>
 <li>doc: An action that updates an existing person record. Accepts the following inputs: <code>identifier</code> (read-only), <code>givenName</code>, <code>familyName</code>, and <code>status</code>.</li>
 <li>rel: person item</li>
-<li>tag: <a href="tag.choreography.html">choreography</a></li>
+<li>tag: <a href="tag.choreography.html">choreography</a>, <a href="tag.update.html">update</a></li>
 <li>rt: <a href="semantic.personItem.html">personItem</a></li>
 <li>descriptor
 <table>
@@ -36,24 +37,29 @@
 <tr>
   <th>id</th>
   <th>type</th>
+  <th>title</th>
 </tr>
 </thead>
 <tbody>
 <tr>
   <td><a href="semantic.identifier.html">identifier</a></td>
   <td>semantic</td>
+  <td>Unique ID of this record.</td>
 </tr>
 <tr>
   <td><a href="semantic.givenName.html">givenName</a></td>
   <td>semantic</td>
+  <td>Common name.</td>
 </tr>
 <tr>
   <td><a href="semantic.familyName.html">familyName</a></td>
   <td>semantic</td>
+  <td>Family name.</td>
 </tr>
 <tr>
   <td><a href="semantic.status.html">status</a></td>
   <td>semantic</td>
+  <td>Status flag.</td>
 </tr>
 </tbody>
 </table></li>
@@ -61,7 +67,7 @@
 
 <hr />
 
-<p><a href="../index.html">home</a> > <a href="../person.svg">asd</a> > <a href="../descriptor/idempotent.doPersonUpdate.json">doPersonUpdate</a></p>
+<p><a href="../index.html">home</a> | <a href="../person.svg">asd</a></p>
 
     </div>
 </body>

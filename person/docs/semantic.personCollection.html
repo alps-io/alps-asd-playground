@@ -26,6 +26,7 @@
 
 <ul>
 <li>type: semantic</li>
+<li>title: Aggregate object that represents a collection of person records</li>
 <li>doc: A list of person records along with possible actions.</li>
 <li><p>tag: <a href="tag.taxonomy.html">taxonomy</a></p></li>
 <li><p>descriptor
@@ -34,44 +35,59 @@
 <tr>
   <th>id</th>
   <th>type</th>
+  <th>title</th>
 </tr>
 </thead>
 <tbody>
 <tr>
   <td><a href="semantic.identifier.html">identifier</a></td>
   <td>semantic</td>
+  <td>Unique ID of this record.</td>
 </tr>
 <tr>
   <td><a href="semantic.givenName.html">givenName</a></td>
   <td>semantic</td>
+  <td>Common name.</td>
 </tr>
 <tr>
   <td><a href="semantic.familyName.html">familyName</a></td>
   <td>semantic</td>
+  <td>Family name.</td>
 </tr>
 <tr>
   <td><a href="semantic.status.html">status</a></td>
   <td>semantic</td>
+  <td>Status flag.</td>
 </tr>
 <tr>
   <td><a href="safe.goHome.html">goHome</a></td>
   <td>safe</td>
+  <td>Navigation action to return the Home resource state.</td>
 </tr>
 <tr>
   <td><a href="safe.goPersonCollection.html">goPersonCollection</a></td>
   <td>safe</td>
+  <td>Navigation action that returns a list of person records.</td>
 </tr>
 <tr>
   <td><a href="safe.goPersonFilter.html">goPersonFilter</a></td>
   <td>safe</td>
+  <td>Navigation action that returns a filtered list of person records.</td>
 </tr>
 <tr>
   <td><a href="safe.goPersonItem.html">goPersonItem</a></td>
   <td>safe</td>
+  <td>Navigation action that returns a single person record.</td>
+</tr>
+<tr>
+  <td><a href="safe.goRelated.html">goRelated</a></td>
+  <td>safe</td>
+  <td>Get the list of possible valid actions</td>
 </tr>
 <tr>
   <td><a href="unsafe.doPersonCreate.html">doPersonCreate</a></td>
   <td>unsafe</td>
+  <td>Add a new person record to the collection.</td>
 </tr>
 </tbody>
 </table></p></li>
@@ -79,7 +95,7 @@
 
 <hr />
 
-<p><a href="../index.html">home</a> > <a href="../person.svg">asd</a> > <a href="../descriptor/semantic.personCollection.json">personCollection</a></p>
+<p><a href="../index.html">home</a> | <a href="../person.svg">asd</a></p>
 
     </div>
 </body>

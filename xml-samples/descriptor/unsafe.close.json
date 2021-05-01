@@ -1,11 +1,7 @@
 {
-  "$schema": "",
   "alps": {
     "descriptor": [
-      {
-        "id": "close",
-        "type": "unsafe"
-      }
+      []
     ]
   },
   "link": [

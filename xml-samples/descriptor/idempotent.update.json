@@ -1,11 +1,7 @@
 {
-  "$schema": "",
   "alps": {
     "descriptor": [
-      {
-        "id": "update",
-        "type": "idempotent"
-      }
+      []
     ]
   },
   "link": [

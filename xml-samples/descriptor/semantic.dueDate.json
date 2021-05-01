@@ -1,11 +1,7 @@
 {
-  "$schema": "",
   "alps": {
     "descriptor": [
-      {
-        "id": "dueDate",
-        "type": "semantic"
-      }
+      []
     ]
   }
 }

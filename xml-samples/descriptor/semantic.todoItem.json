@@ -1,11 +1,41 @@
 {
-  "$schema": "",
   "alps": {
     "descriptor": [
-      {
-        "id": "todoItem",
-        "type": "semantic"
-      }
+      [
+        {
+          "href": "#title"
+        },
+        {
+          "href": "#dueDate"
+        },
+        {
+          "href": "#category"
+        },
+        {
+          "href": "#owner"
+        },
+        {
+          "href": "#status"
+        },
+        {
+          "href": "#list"
+        },
+        {
+          "href": "#search"
+        },
+        {
+          "href": "#create"
+        },
+        {
+          "href": "#update"
+        },
+        {
+          "href": "#close"
+        },
+        {
+          "href": "#remove"
+        }
+      ]
     ]
   }
 }

@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <title>ALPS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+    
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="markdown-body">
+        <h1>Simple 'TODO' Service Profile</h1>
+
+<p>Author: Mike Amundsen (mca@mamund.com)<br />
+<br />
+      Simple &quot;to-do&quot; service.<br />
+      <br />
+      Servers MUST decide which data elements are valid in transitions.<br />
+      Clients SHOULD be coded to recognize all of the transition elements including<br />
+      any descriptors that MAY appear as params for the transition even though<br />
+      servers MAY NOT support all the semantic descriptors listed here.</p>
+
+<ul>
+<li><a href="to-do.xml">ALPS</a></li>
+<li><a href="docs/asd.html">Application State Diagram</a></li>
+<li>Semantic Descriptors
+
+<ul>
+<li><a href="docs/semantic.category.html">category</a> (semantic), free-form string identifying the category of the TODO item</li>
+<li><a href="docs/unsafe.close.html">close</a> (unsafe), marks an existing TODO item status as 'closed'</li>
+<li><a href="docs/unsafe.create.html">create</a> (unsafe), add a new TODO item to the collection (using title, dueDate, category, owner)</li>
+<li><a href="docs/semantic.dueDate.html">dueDate</a> (semantic), dueDate (ISO format) of the TODO item</li>
+<li><a href="docs/safe.list.html">list</a> (safe), returns a list of TODO items</li>
+<li><a href="docs/semantic.owner.html">owner</a> (semantic), free-form string identifying the owner (person) of the TODO item</li>
+<li><a href="docs/idempotent.remove.html">remove</a> (idempotent), removes an existing TODO item from the list</li>
+<li><a href="docs/safe.search.html">search</a> (safe), returns a filtered list (using title, category, owner) of TODO Items</li>
+<li><a href="docs/semantic.status.html">status</a> (semantic), status of the TODO item (open or closed, defaults to open)</li>
+<li><a href="docs/semantic.title.html">title</a> (semantic), title of the TODO item</li>
+<li><a href="docs/semantic.todoItem.html">todoItem</a> (semantic)</li>
+<li><a href="docs/idempotent.update.html">update</a> (idempotent), updates an existing TODO item (using dueDate, category and owner)</li>
+</ul></li>
+<li>Tags
+
+<ul>
+<li><a href="docs/tag.choreography.html">choreography</a></li>
+<li><a href="docs/tag.ontology.html">ontology</a></li>
+<li><a href="docs/tag.taxonomy.html">taxonomy</a></li>
+</ul></li>
+</ul>
+
+    </div>
+</body>
+</html>

@@ -1,11 +1,7 @@
 {
-  "$schema": "",
   "alps": {
     "descriptor": [
-      {
-        "id": "owner",
-        "type": "semantic"
-      }
+      []
     ]
   }
 }

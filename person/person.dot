@@ -14,17 +14,27 @@ digraph application_state_diagram {
 
     home -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
     home -> personCollection [label = "goPersonCollection, person collection (safe)" URL="docs/safe.goPersonCollection.html" target="_parent" fontsize=13];
+    home -> relatedActions [label = "goRelated, person related (safe)" URL="docs/safe.goRelated.html" target="_parent" fontsize=13];
     personCollection -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
     personCollection -> personCollection [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonCollection.html">goPersonCollection (safe)</td></tr><tr><td align="left" href="docs/safe.goPersonFilter.html">goPersonFilter (safe)</td></tr></table>> fontsize=13];
-    personCollection -> personItem [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonItem.html">goPersonItem (safe)</td></tr><tr><td align="left" href="docs/unsafe.doPersonCreate.html">doPersonCreate (unsafe)</td></tr></table>> fontsize=13];
+    personCollection -> personItem [label=<<table  border="0"><tr><td align="left" href="docs/unsafe.doPersonCreate.html">doPersonCreate (unsafe)</td></tr><tr><td align="left" href="docs/safe.goPersonItem.html">goPersonItem (safe)</td></tr></table>> fontsize=13];
+    personCollection -> relatedActions [label = "goRelated, person related (safe)" URL="docs/safe.goRelated.html" target="_parent" fontsize=13];
     personItem -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
     personItem -> personCollection [label = "goPersonCollection, person collection (safe)" URL="docs/safe.goPersonCollection.html" target="_parent" fontsize=13];
-    personItem -> personItem [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonItem.html">goPersonItem (safe)</td></tr><tr><td align="left" href="docs/idempotent.doPersonUpdate.html">doPersonUpdate (idempotent)</td></tr></table>> fontsize=13];
+    personItem -> personItem [label=<<table  border="0"><tr><td align="left" href="docs/idempotent.doPersonUpdate.html">doPersonUpdate (idempotent)</td></tr><tr><td align="left" href="docs/safe.goPersonItem.html">goPersonItem (safe)</td></tr></table>> fontsize=13];
     personItem -> personStatus [label = "goPersonStatus, person status item (safe)" URL="docs/safe.goPersonStatus.html" target="_parent" fontsize=13];
+    personItem -> relatedActions [label = "goRelated, person related (safe)" URL="docs/safe.goRelated.html" target="_parent" fontsize=13];
     personStatus -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
     personStatus -> personCollection [label = "goPersonCollection, person collection (safe)" URL="docs/safe.goPersonCollection.html" target="_parent" fontsize=13];
     personStatus -> personItem [label = "goPersonItem, person item (safe)" URL="docs/safe.goPersonItem.html" target="_parent" fontsize=13];
-    personStatus -> personStatus [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonStatus.html">goPersonStatus (safe)</td></tr><tr><td align="left" href="docs/idempotent.doPersonStatusUpdate.html">doPersonStatusUpdate (idempotent)</td></tr></table>> fontsize=13];
+    personStatus -> personStatus [label=<<table  border="0"><tr><td align="left" href="docs/idempotent.doPersonStatusUpdate.html">doPersonStatusUpdate (idempotent)</td></tr><tr><td align="left" href="docs/safe.goPersonStatus.html">goPersonStatus (safe)</td></tr></table>> fontsize=13];
+    personStatus -> relatedActions [label = "goRelated, person related (safe)" URL="docs/safe.goRelated.html" target="_parent" fontsize=13];
+    relatedActions -> home [label = "goHome, home (safe)" URL="docs/safe.goHome.html" target="_parent" fontsize=13];
+    relatedActions -> personCollection [label=<<table  border="0"><tr><td align="left" href="docs/safe.goPersonCollection.html">goPersonCollection (safe)</td></tr><tr><td align="left" href="docs/safe.goPersonFilter.html">goPersonFilter (safe)</td></tr></table>> fontsize=13];
+    relatedActions -> personItem [label=<<table  border="0"><tr><td align="left" href="docs/unsafe.doPersonCreate.html">doPersonCreate (unsafe)</td></tr><tr><td align="left" href="docs/idempotent.doPersonUpdate.html">doPersonUpdate (idempotent)</td></tr><tr><td align="left" href="docs/safe.goPersonItem.html">goPersonItem (safe)</td></tr></table>> fontsize=13];
+    relatedActions -> personStatus [label=<<table  border="0"><tr><td align="left" href="docs/idempotent.doPersonStatusUpdate.html">doPersonStatusUpdate (idempotent)</td></tr><tr><td align="left" href="docs/safe.goPersonStatus.html">goPersonStatus (safe)</td></tr></table>> fontsize=13];
+    relatedActions -> relatedActions [label = "goRelated, person related (safe)" URL="docs/safe.goRelated.html" target="_parent" fontsize=13];
 
+    relatedActions [URL="docs/semantic.relatedActions.html" target="_parent"]
 
 }

@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <title>todoItem (semantic)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+    
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="markdown-body">
+        <p>Simple 'TODO' Service Profile: Semantic Descriptor</p>
+
+<h1>todoItem</h1>
+
+<ul>
+<li>type: semantic</li>
+<li><p>tag: <a href="tag.taxonomy.html">taxonomy</a></p></li>
+<li><p>descriptor
+<table>
+<thead>
+<tr>
+  <th>id</th>
+  <th>type</th>
+  <th>title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="semantic.title.html">title</a></td>
+  <td>semantic</td>
+  <td>title of the TODO item</td>
+</tr>
+<tr>
+  <td><a href="semantic.dueDate.html">dueDate</a></td>
+  <td>semantic</td>
+  <td>dueDate (ISO format) of the TODO item</td>
+</tr>
+<tr>
+  <td><a href="semantic.category.html">category</a></td>
+  <td>semantic</td>
+  <td>free-form string identifying the category of the TODO item</td>
+</tr>
+<tr>
+  <td><a href="semantic.owner.html">owner</a></td>
+  <td>semantic</td>
+  <td>free-form string identifying the owner (person) of the TODO item</td>
+</tr>
+<tr>
+  <td><a href="semantic.status.html">status</a></td>
+  <td>semantic</td>
+  <td>status of the TODO item (open or closed, defaults to open)</td>
+</tr>
+<tr>
+  <td><a href="safe.list.html">list</a></td>
+  <td>safe</td>
+  <td>returns a list of TODO items</td>
+</tr>
+<tr>
+  <td><a href="safe.search.html">search</a></td>
+  <td>safe</td>
+  <td>returns a filtered list (using title, category, owner) of TODO Items</td>
+</tr>
+<tr>
+  <td><a href="unsafe.create.html">create</a></td>
+  <td>unsafe</td>
+  <td>add a new TODO item to the collection (using title, dueDate, category, owner)</td>
+</tr>
+<tr>
+  <td><a href="unsafe.close.html">close</a></td>
+  <td>unsafe</td>
+  <td>marks an existing TODO item status as 'closed'</td>
+</tr>
+<tr>
+  <td><a href="idempotent.update.html">update</a></td>
+  <td>idempotent</td>
+  <td>updates an existing TODO item (using dueDate, category and owner)</td>
+</tr>
+<tr>
+  <td><a href="idempotent.remove.html">remove</a></td>
+  <td>idempotent</td>
+  <td>removes an existing TODO item from the list</td>
+</tr>
+</tbody>
+</table></p></li>
+</ul>
+
+<hr />
+
+<p><a href="../index.html">home</a> | <a href="../to-do.svg">asd</a></p>
+
+    </div>
+</body>
+</html>
