@@ -89,7 +89,7 @@
         ]
       },
       {"id": "relatedActions", "type": "semantic",
-        "doc": {"value": "The list of valid possible actions for this resource/state"},
+        "doc": {"value": "The list of valid possible actions for this resource/state. At runtime, not all these links may appear. For example, if there are no `person` items in the list, the `doPersonFilter` and other  links may be missing in the response. Or, if the user logged in does not have sufficient access, the `doPersonCreate` action may be missing."},
         "title" : "The list of possible actions.",
         "tag": "taxonomy",
         "descriptor": [

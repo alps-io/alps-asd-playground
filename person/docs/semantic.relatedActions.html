@@ -27,7 +27,7 @@
 <ul>
 <li>type: semantic</li>
 <li>title: The list of possible actions.</li>
-<li>doc: The list of valid possible actions for this resource/state</li>
+<li>doc: The list of valid possible actions for this resource/state. At runtime, not all these links may appear. For example, if there are no <code>person</code> items in the list, the <code>doPersonFilter</code> and other  links may be missing in the response. Or, if the user logged in does not have sufficient access, the <code>doPersonCreate</code> action may be missing.</li>
 <li><p>tag: <a href="tag.taxonomy.html">taxonomy</a></p></li>
 <li><p>descriptor
 <table>
