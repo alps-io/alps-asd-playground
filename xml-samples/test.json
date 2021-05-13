@@ -1,9 +1,12 @@
 {
+  "$schema": "https://alps-io.github.io/schemas/alps.json",
   "alps" : {
-    "title": "Import XML nodes for To-Do Profile",
-    "doc": {"value": "Author: Mike Amundsen (mca@mamund.com)\n\nSimple 'to-do' service.\n\nServers MUST decide which data elements are valid in transitions. Clients SHOULD be coded to recognize all of the transition elements including any descriptors that MAY appear as params for the transition even though servers MAY NOT support all the semantic descriptors listed here."},
+    "version": "1.0",
+    "title": "To-Do Profile - Imported XML",
+        
     "descriptor" : [
       {"href": "https://raw.githack.com/alps-io/profiles/master/xml/to-do.xml#todoItem"}
     ]
+    
   }
 }

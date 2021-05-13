@@ -2,7 +2,7 @@ digraph application_state_diagram {
   graph [
     labelloc="t";
     fontname="Helvetica"
-    label="Import XML nodes for To-Do Profile";
+    label="To-Do Profile - Imported XML";
     URL="index.html" target="_parent"
   ];
   node [shape = box, style = "bold,filled" fillcolor="lightgray"];
